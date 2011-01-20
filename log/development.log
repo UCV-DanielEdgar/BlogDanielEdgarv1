@@ -1,0 +1,298 @@
+  [1m[36mSQL (1.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (23.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (13.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+Migrating to CreateHighScores (20110118021434)
+  [1m[36mSQL (3.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[36mSQL (3.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateHighScores (20110118021434)
+  [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (2.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[36mSQL (3.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateHighScores (20110118021434)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (3.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateHighScores (20110118021434)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateHighScores (20110118021434)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (2.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[36mSQL (1.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateArticles (20110118150340)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (3.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateArticles (20110118150340)
+  [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (4.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateArticles (20110118150340)
+  [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (4.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateArticles (20110118150340)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (3.2ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (13.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110118150340')
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.7ms)[0m  PRAGMA index_list("articles")
+  [1m[36mSQL (5.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (1.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (173.3ms)[0m  CREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (95.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (58.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (231.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110118150340')[0m
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-01-18 18:39:32 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mSQL (1.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+Rendered articles/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 146ms (Views: 10.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2011-01-18 18:39:37 -0430
+  Processing by ArticlesController#new as HTML
+Rendered articles/_form.html.erb (99.0ms)
+Rendered articles/new.html.erb within layouts/application (115.7ms)
+Completed 200 OK in 175ms (Views: 132.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2011-01-18 18:40:01 -0430
+  Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MTgU95VXr6UgXGO+ZxQNyTRcKVR5kZuJYUqD3Bh0Guw=", "article"=>{"title"=>"la mama de la patata", "content"=>"drama, ficcion"}, "commit"=>"Create Article"}
+  [1m[36mSQL (2.4ms)[0m  [1mINSERT INTO "articles" ("content", "created_at", "title", "updated_at") VALUES ('drama, ficcion', '2011-01-18 23:10:01.730367', 'la mama de la patata', '2011-01-18 23:10:01.730367')[0m
+Redirected to http://localhost:3000/articles/1
+Completed 302 Found in 179ms
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2011-01-18 18:40:01 -0430
+  Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles" WHERE ("articles"."id" = 1) LIMIT 1
+Rendered articles/show.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 38ms (Views: 17.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2011-01-18 18:40:06 -0430
+  Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (9.9ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE ("articles"."id" = 1) LIMIT 1[0m
+Rendered articles/show.html.erb within layouts/application (36.5ms)
+Completed 200 OK in 96ms (Views: 56.8ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/articles/1/edit" for 127.0.0.1 at 2011-01-18 18:40:17 -0430
+  Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mArticle Load (17.7ms)[0m  SELECT "articles".* FROM "articles" WHERE ("articles"."id" = 1) LIMIT 1
+Rendered articles/_form.html.erb (51.3ms)
+Rendered articles/edit.html.erb within layouts/application (65.8ms)
+Completed 200 OK in 221ms (Views: 137.9ms | ActiveRecord: 17.7ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-01-18 18:40:23 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (1.6ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+Rendered articles/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 32ms (Views: 19.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-01-18 18:51:16 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mSQL (1.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mArticle Load (0.9ms)[0m  SELECT "articles".* FROM "articles"
+Rendered articles/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 152ms (Views: 21.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-01-18 18:51:30 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+Rendered articles/index.html.erb within layouts/application (27.6ms)
+Completed 200 OK in 61ms (Views: 38.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-01-18 18:51:32 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (6.1ms)[0m  SELECT "articles".* FROM "articles"
+Rendered articles/index.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 104ms (Views: 43.9ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-01-18 18:51:36 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.9ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+Rendered articles/index.html.erb within layouts/application (36.3ms)
+Completed 200 OK in 100ms (Views: 55.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-01-20 12:04:25 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mSQL (5.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles"
+Rendered articles/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 161ms (Views: 18.4ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2011-01-20 12:04:30 -0430
+  Processing by ArticlesController#new as HTML
+Rendered articles/_form.html.erb (72.2ms)
+Rendered articles/new.html.erb within layouts/application (195.9ms)
+Completed 200 OK in 273ms (Views: 228.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2011-01-20 12:04:45 -0430
+  Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v7mXAgX0HDTlmd0AzsrCRM5qPE7YsL1ZUTclgZ1xpVM=", "article"=>{"title"=>"esgar", "content"=>"es mi subdito"}, "commit"=>"Create Article"}
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "articles" ("content", "created_at", "title", "updated_at") VALUES ('es mi subdito', '2011-01-20 16:34:45.351461', 'esgar', '2011-01-20 16:34:45.351461')[0m
+Redirected to http://localhost:3000/articles/2
+Completed 302 Found in 218ms
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2011-01-20 12:04:45 -0430
+  Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles" WHERE ("articles"."id" = 2) LIMIT 1
+Rendered articles/show.html.erb within layouts/application (50.9ms)
+Completed 200 OK in 94ms (Views: 70.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-01-20 12:04:48 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (7.6ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+Rendered articles/index.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 55ms (Views: 28.9ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-01-20 12:04:57 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.8ms)[0m  SELECT "articles".* FROM "articles"
+Rendered articles/index.html.erb within layouts/application (55.7ms)
+Completed 200 OK in 125ms (Views: 75.3ms | ActiveRecord: 0.8ms)

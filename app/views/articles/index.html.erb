@@ -1,0 +1,29 @@
+<h1>Listando Articulos</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Content</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @articles.each do |article| %>
+  <tr>
+    <td><%= article.title %></td>
+    <td><%= article.content %></td>
+    <td><%= link_to article.title %></td>
+    <td><%= link_to article.content %></td>
+    <td><%= link_to 'Edit', edit_article_path(article) %></td>
+    <td><%= link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete %></td>
+    
+        
+    
+  </tr>
+<% end %>
+</table>
+
+<br />
+<td><%= link_to 'Volver a artículos', articles_path %></td>
+<%= link_to 'New Article', new_article_path %>
