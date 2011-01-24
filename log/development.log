@@ -384,3 +384,299 @@ Completed 200 OK in 124ms (Views: 77.5ms | ActiveRecord: 0.0ms)
 [0m
   [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
   [1m[36mSQL (3.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110118150340')[0m
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-01-24 10:13:40 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+Rendered articles/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 127ms (Views: 29.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2011-01-24 10:13:44 -0430
+  Processing by ArticlesController#new as HTML
+Rendered articles/_form.html.erb (52.3ms)
+Rendered articles/new.html.erb within layouts/application (56.4ms)
+Completed 200 OK in 71ms (Views: 61.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-01-24 10:13:48 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+Rendered articles/index.html.erb within layouts/application (38.5ms)
+Completed 200 OK in 53ms (Views: 42.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-01-24 10:13:51 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.5ms)[0m  SELECT "articles".* FROM "articles"
+Rendered articles/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 27ms (Views: 16.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-01-24 10:13:52 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+Rendered articles/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 28ms (Views: 17.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-01-24 10:13:53 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles"
+Rendered articles/index.html.erb within layouts/application (37.9ms)
+Completed 200 OK in 52ms (Views: 42.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-01-24 10:13:54 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+Rendered articles/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 26ms (Views: 16.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-01-24 10:13:57 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles"
+Rendered articles/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 27ms (Views: 17.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-01-24 10:13:59 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+Rendered articles/index.html.erb within layouts/application (38.5ms)
+Completed 200 OK in 55ms (Views: 42.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-01-24 10:14:00 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles"
+Rendered articles/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 27ms (Views: 16.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-01-24 10:14:03 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+Rendered articles/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 27ms (Views: 17.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/2/edit" for 127.0.0.1 at 2011-01-24 10:14:15 -0430
+  Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE ("articles"."id" = 2) LIMIT 1
+Rendered articles/_form.html.erb (15.6ms)
+Rendered articles/edit.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 83ms (Views: 71.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-01-24 10:14:18 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+Rendered articles/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 27ms (Views: 17.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2011-01-24 10:26:24 -0430
+  Processing by ArticlesController#new as HTML
+Rendered articles/_form.html.erb (7.7ms)
+Rendered articles/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 26ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-01-24 10:43:45 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles"
+Rendered articles/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 27ms (Views: 17.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-01-24 10:43:49 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+Rendered articles/index.html.erb within layouts/application (38.8ms)
+Completed 200 OK in 53ms (Views: 43.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/2/edit" for 127.0.0.1 at 2011-01-24 10:43:55 -0430
+  Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE ("articles"."id" = 2) LIMIT 1
+Rendered articles/_form.html.erb (10.3ms)
+Rendered articles/edit.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 32ms (Views: 18.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/articles/2" for 127.0.0.1 at 2011-01-24 10:43:59 -0430
+  Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RZUHLQpA5hJPgpm7ZbD05ipl3oHowyzUgwSDRuYRwT8=", "article"=>{"title"=>"esgar", "content"=>"es mi subdito"}, "commit"=>"Update Article", "id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE ("articles"."id" = 2) LIMIT 1[0m
+Redirected to http://localhost:3000/articles/2
+Completed 302 Found in 23ms
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2011-01-24 10:43:59 -0430
+  Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mArticle Load (0.8ms)[0m  SELECT "articles".* FROM "articles" WHERE ("articles"."id" = 2) LIMIT 1
+Rendered articles/show.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 53ms (Views: 38.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-01-24 10:44:48 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+Rendered articles/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 27ms (Views: 16.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2011-01-24 10:44:50 -0430
+  Processing by ArticlesController#new as HTML
+Rendered articles/_form.html.erb (8.1ms)
+Rendered articles/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 30ms (Views: 16.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-01-24 10:44:52 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.5ms)[0m  SELECT "articles".* FROM "articles"
+Rendered articles/index.html.erb within layouts/application (42.8ms)
+Completed 200 OK in 59ms (Views: 47.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/2/edit" for 127.0.0.1 at 2011-01-24 10:44:55 -0430
+  Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE ("articles"."id" = 2) LIMIT 1[0m
+Rendered articles/_form.html.erb (10.2ms)
+Rendered articles/edit.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 31ms (Views: 18.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-01-24 10:44:59 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles"
+Rendered articles/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 27ms (Views: 17.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-01-24 10:45:01 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+Rendered articles/index.html.erb within layouts/application (36.5ms)
+Completed 200 OK in 52ms (Views: 41.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-01-24 10:45:02 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles"
+Rendered articles/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 27ms (Views: 16.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-01-24 10:45:03 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+Rendered articles/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 27ms (Views: 16.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-01-24 10:45:04 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (2.2ms)[0m  SELECT "articles".* FROM "articles"
+Rendered articles/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 55ms (Views: 18.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-01-24 10:45:05 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+Rendered articles/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 31ms (Views: 19.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-01-24 10:45:06 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles"
+Rendered articles/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 27ms (Views: 16.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-01-24 10:45:06 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+Rendered articles/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 53ms (Views: 17.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-01-24 10:45:07 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.5ms)[0m  SELECT "articles".* FROM "articles"
+Rendered articles/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 27ms (Views: 16.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-01-24 10:45:08 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+Rendered articles/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 27ms (Views: 17.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/2/edit" for 127.0.0.1 at 2011-01-24 10:45:11 -0430
+  Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE ("articles"."id" = 2) LIMIT 1
+Rendered articles/_form.html.erb (11.0ms)
+Rendered articles/edit.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 33ms (Views: 19.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/articles/2" for 127.0.0.1 at 2011-01-24 10:45:14 -0430
+  Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RZUHLQpA5hJPgpm7ZbD05ipl3oHowyzUgwSDRuYRwT8=", "article"=>{"title"=>"esgar", "content"=>"es mi subdito"}, "commit"=>"Update Article", "id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE ("articles"."id" = 2) LIMIT 1[0m
+Redirected to http://localhost:3000/articles/2
+Completed 302 Found in 49ms
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2011-01-24 10:45:14 -0430
+  Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE ("articles"."id" = 2) LIMIT 1
+Rendered articles/show.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 30ms (Views: 14.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-01-24 10:45:16 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+Rendered articles/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 55ms (Views: 17.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-01-24 10:45:17 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles"
+Rendered articles/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 28ms (Views: 17.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2011-01-24 10:45:18 -0430
+  Processing by ArticlesController#new as HTML
+Rendered articles/_form.html.erb (7.3ms)
+Rendered articles/new.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 25ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-01-24 10:45:20 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+Rendered articles/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 52ms (Views: 16.8ms | ActiveRecord: 0.4ms)

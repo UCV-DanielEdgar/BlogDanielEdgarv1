@@ -52,10 +52,22 @@ fill_in arg1, :with=>arg2
 end
 
 When /^I press "([^"]*)"$/ do |arg1|
-
+click_button(arg1)
+response.should contain(arg1)
 end
 
 Then /^I should be on the article show page for "([^"]*)"$/ do |arg1|
+
+
+article_path = URI.parse(article_url).path
+if article_path.respond_to? :should
+article_path.should == path_to(arg1)
+else
+assert_equal path_to(arg1), current_path
+end
+
+
+
 pending # express the regexp above with the code you wish you had
 end
 
@@ -73,4 +85,4 @@ end
 
 Then /^I should not see "([^"]*)" on the articles list$/ do |arg1|
 pending # express the regexp above with the code yo
-end
+end 
