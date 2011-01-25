@@ -10,6 +10,10 @@ module NavigationHelpers
 
     when /the home\s?page/
       '/'
+  
+
+     when /the article show page for "(.+)"/
+     article_path(Article.find_by_title($1))
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
