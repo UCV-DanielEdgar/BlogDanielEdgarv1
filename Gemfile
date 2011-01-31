@@ -30,5 +30,5 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
     gem 'cucumber-rails', '>=0.3.2'
   #  gem 'webrat'
      gem 'capybara'
-  
+    gem 'devise'
   end

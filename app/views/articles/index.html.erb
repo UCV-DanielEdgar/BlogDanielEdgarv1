@@ -1,6 +1,8 @@
 <h1>Listando Articulos</h1>
 <p id="notice"><%= notice %></p>
 <table>
+
+      
   <tr>
     <th>Title</th>
     <th></th>
@@ -14,16 +16,19 @@
     <td><%= article.content %></td>
     <td><%= link_to article.title %></td>
     <td><%= link_to article.content %></td>
+    <% if user_signed_in? %>
     <td><%= link_to 'Editar', edit_article_path(article) %></td>
     <td><%= link_to 'Eliminar', article, :method => :delete %></td>
-    
+     <% end %>
         
     
   </tr>
 <% end %>
 <tr>
+  <% if user_signed_in? %>
 <td><%= link_to 'Volver a artículos', articles_path %></td>
 <td><%= link_to 'Agregar articulo', new_article_path %></td>
+<% end %>
 </tr>
 </table>
 
