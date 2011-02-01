@@ -5,6 +5,7 @@ Feature: Administer articles
 
   Scenario: Adding an article
     Given there is no article with the title "Hello world!"
+    And I am authenticated
     And I am on the articles page
     When I follow "Agregar articulo"
     And I fill in "Title" with "Hello world!"
@@ -19,6 +20,7 @@ Feature: Administer articles
 
   Scenario: Adding an article with a duplicate title
     Given an article with the title "Hello world!"
+    And I am authenticated
     And I am on the articles page
     When I follow "Agregar articulo"
     And I fill in "Title" with "Hello world!"
@@ -27,12 +29,14 @@ Feature: Administer articles
 
   Scenario: Adding an article without a title
     Given I am on the articles page
+    And I am authenticated
     When I follow "Agregar articulo"
     And I press "Guardar"
     Then I should not see "El articulo ha sido guardado"
 
   Scenario: Deleting an article
     Given an article with the title "Hello world!"
+    And I am authenticated
     And I am on the articles page
     When I follow "Hello world!"
     And I follow "Eliminar"
@@ -42,6 +46,7 @@ Feature: Administer articles
 
   Scenario: Editing the title of an article
     Given an article with the title "Hello world!"
+    And I am authenticated
     And I am on the articles page
     When I follow "Hello world!"
     And I follow "Editar"
@@ -55,6 +60,7 @@ Feature: Administer articles
 
   Scenario: Editing the content of an article
     Given an article with the title "Hello world!"
+    And I am authenticated
     And I am on the articles page
     When I follow "Hello world!"
     And I follow "Editar"

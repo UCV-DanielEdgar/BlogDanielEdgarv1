@@ -1,6 +1,8 @@
 class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.xml
+  before_filter :authenticate_user!,  :except => [:index, :show]
+
   def index
     @articles = Article.all
 
@@ -24,12 +26,14 @@ class ArticlesController < ApplicationController
   # GET /articles/new
   # GET /articles/new.xml
   def new
+
     @article = Article.new
 
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @article }
     end
+    
   end
 
   # GET /articles/1/edit

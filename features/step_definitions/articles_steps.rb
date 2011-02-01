@@ -19,4 +19,32 @@ Then /^I should not see "([^"]*)" on the articles list$/ do |arg1|
    page.should_not have_content(arg1)
 end
 
+Given /^I am authenticated$/ do
+  
+  email = 'testing@man.net'
+  login = 'Testing man'
+  password = 'secretpass'
+
+
+  User.new(:email => email,
+           :password => password,
+           :password_confirmation => password).save!
+
+
+  
+  And %{I go to login}
+  And %{I fill in "user_email" with "#{email}"}
+  And %{I fill in "user_password" with "#{password}"}
+  And %{I press "Sign in"}
+
+end
+
+Given /^I am not authenticated$/ do
+  visit('/users/sign_out')
+end
+
+
+
+
+
 
