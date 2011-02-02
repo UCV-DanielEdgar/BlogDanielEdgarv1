@@ -20736,3 +20736,1199 @@ Started GET "/users/sign_in" for 127.0.0.1 at 2011-02-02 13:57:47 -0430
 Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/devise-1.1.5/app/views/devise/shared/_links.erb (3.9ms)
 Rendered articles/_login.html.erb (1.8ms)
 Completed 200 OK in 61ms (Views: 60.3ms | ActiveRecord: 0.0ms)
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles"."id" FROM "articles" WHERE ("articles"."title" = 'La respuesta a todas las preguntas') LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "articles" ("content", "created_at", "title", "updated_at") VALUES (NULL, '2011-02-02 19:46:21.818039', 'La respuesta a todas las preguntas', '2011-02-02 19:46:21.818039')[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles"."id" FROM "articles" WHERE ("articles"."title" = 'Nuevo lorem ipsum') LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "articles" ("content", "created_at", "title", "updated_at") VALUES (NULL, '2011-02-02 19:46:21.846499', 'Nuevo lorem ipsum', '2011-02-02 19:46:21.846499')[0m
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-02-02 15:16:21 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.9ms)[0m  SELECT "articles".* FROM "articles"
+Rendered articles/_login.html.erb (3.6ms)
+Rendered articles/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 24ms (Views: 21.7ms | ActiveRecord: 2.5ms)
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles"."id" FROM "articles" WHERE ("articles"."title" = 'La respuesta a todas las preguntas') LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "articles" ("content", "created_at", "title", "updated_at") VALUES ('no hay tal cosa', '2011-02-02 19:46:22.333913', 'La respuesta a todas las preguntas', '2011-02-02 19:46:22.333913')
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-02-02 15:16:22 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+Rendered articles/_login.html.erb (1.0ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-02-02 15:16:22 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+Rendered articles/_login.html.erb (1.3ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.2ms)
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE ("articles"."title" = 'Hello world!') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('testing@man.net')) LIMIT 1
+  [1m[36mSQL (6.1ms)[0m  [1mINSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "password_salt", "remember_created_at", "remember_token", "reset_password_token", "sign_in_count", "updated_at") VALUES ('2011-02-02 19:46:22.663107', NULL, NULL, 'testing@man.net', '$2a$10$Esi0nBmeRV8KO6w7CQfFBuN2Sv.ydQEjzHQfrAINV/TITQk5ycgwK', NULL, NULL, '$2a$10$Esi0nBmeRV8KO6w7CQfFBu', NULL, NULL, NULL, 0, '2011-02-02 19:46:22.663107')[0m
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-02-02 15:16:22 -0430
+  Processing by Devise::SessionsController#new as HTML
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/devise-1.1.5/app/views/devise/shared/_links.erb (2.0ms)
+Rendered articles/_login.html.erb (0.6ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 6.5ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-02-02 15:16:22 -0430
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"testing@man.net", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (5.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'testing@man.net') LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = '2011-02-02 19:46:22.923591', "current_sign_in_ip" = '127.0.0.1', "last_sign_in_at" = '2011-02-02 19:46:22.923591', "last_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2011-02-02 19:46:22.924374' WHERE ("users"."id" = 1)[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 164ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-02 15:16:22 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles"
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered articles/_login.html.erb (3.0ms)
+Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-02-02 15:16:22 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  [1m[36mUser Load (20.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered articles/_login.html.erb (22.0ms)
+Completed 200 OK in 28ms (Views: 5.9ms | ActiveRecord: 21.1ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2011-02-02 15:16:23 -0430
+  Processing by ArticlesController#new as HTML
+  [1m[35mUser Load (2.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered articles/_form.html.erb (6.4ms)
+Rendered articles/_login.html.erb (0.7ms)
+Completed 200 OK in 31ms (Views: 26.6ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2011-02-02 15:16:23 -0430
+  Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "article"=>{"title"=>"Hello world!", "content"=>"spam spam spam"}, "commit"=>"Guardar"}
+  [1m[36mUser Load (17.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mArticle Load (1.2ms)[0m  SELECT "articles"."id" FROM "articles" WHERE ("articles"."title" = 'Hello world!') LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "articles" ("content", "created_at", "title", "updated_at") VALUES ('spam spam spam', '2011-02-02 19:46:23.190581', 'Hello world!', '2011-02-02 19:46:23.190581')[0m
+Redirected to http://www.example.com/articles/1
+Completed 302 Found in 100ms
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2011-02-02 15:16:23 -0430
+  Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE ("articles"."id" = 1) LIMIT 1
+  [1m[36mUser Load (2.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered articles/_login.html.erb (3.6ms)
+Completed 200 OK in 13ms (Views: 9.0ms | ActiveRecord: 21.3ms)
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE ("articles"."title" = 'Hello world!') LIMIT 1
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles"."id" FROM "articles" WHERE ("articles"."title" = 'Hello world!') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "articles" ("content", "created_at", "title", "updated_at") VALUES (NULL, '2011-02-02 19:46:23.279730', 'Hello world!', '2011-02-02 19:46:23.279730')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('testing@man.net')) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "password_salt", "remember_created_at", "remember_token", "reset_password_token", "sign_in_count", "updated_at") VALUES ('2011-02-02 19:46:23.406146', NULL, NULL, 'testing@man.net', '$2a$10$sqHPjLbwuYvEj7dmEjrcmuQT5SDVKSR98eyHh96lYd2.WgM8WIPlO', NULL, NULL, '$2a$10$sqHPjLbwuYvEj7dmEjrcmu', NULL, NULL, NULL, 0, '2011-02-02 19:46:23.406146')
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-02-02 15:16:23 -0430
+  Processing by Devise::SessionsController#new as HTML
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/devise-1.1.5/app/views/devise/shared/_links.erb (0.7ms)
+Rendered articles/_login.html.erb (0.8ms)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-02-02 15:16:23 -0430
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"testing@man.net", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (3.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'testing@man.net') LIMIT 1[0m
+  [1m[35mSQL (4.0ms)[0m  UPDATE "users" SET "current_sign_in_at" = '2011-02-02 19:46:23.610763', "current_sign_in_ip" = '127.0.0.1', "last_sign_in_at" = '2011-02-02 19:46:23.610763', "last_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2011-02-02 19:46:23.611896' WHERE ("users"."id" = 1)
+Redirected to http://www.example.com/
+Completed 302 Found in 179ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-02 15:16:23 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  [1m[35mUser Load (2.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered articles/_login.html.erb (4.4ms)
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-02-02 15:16:23 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  [1m[35mUser Load (2.6ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered articles/_login.html.erb (4.0ms)
+Completed 200 OK in 11ms (Views: 6.8ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2011-02-02 15:16:23 -0430
+  Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered articles/_form.html.erb (2.7ms)
+Rendered articles/_login.html.erb (0.4ms)
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2011-02-02 15:16:23 -0430
+  Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "article"=>{"title"=>"Hello world!", "content"=>""}, "commit"=>"Guardar"}
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles"."id" FROM "articles" WHERE ("articles"."title" = 'Hello world!') LIMIT 1[0m
+Rendered articles/_form.html.erb (7.9ms)
+Rendered articles/_login.html.erb (0.4ms)
+Completed 200 OK in 17ms (Views: 11.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-02-02 15:16:23 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+Rendered articles/_login.html.erb (0.8ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('testing@man.net')) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "password_salt", "remember_created_at", "remember_token", "reset_password_token", "sign_in_count", "updated_at") VALUES ('2011-02-02 19:46:23.859263', NULL, NULL, 'testing@man.net', '$2a$10$VljrSVe9M5M18cMsZIgSiOzEWkXwd0X.pDDps2sWrBl5off0pVhtK', NULL, NULL, '$2a$10$VljrSVe9M5M18cMsZIgSiO', NULL, NULL, NULL, 0, '2011-02-02 19:46:23.859263')
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-02-02 15:16:23 -0430
+  Processing by Devise::SessionsController#new as HTML
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/devise-1.1.5/app/views/devise/shared/_links.erb (0.8ms)
+Rendered articles/_login.html.erb (0.7ms)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-02-02 15:16:23 -0430
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"testing@man.net", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'testing@man.net') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "current_sign_in_at" = '2011-02-02 19:46:24.005584', "current_sign_in_ip" = '127.0.0.1', "last_sign_in_at" = '2011-02-02 19:46:24.005584', "last_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2011-02-02 19:46:24.006715' WHERE ("users"."id" = 1)
+Redirected to http://www.example.com/
+Completed 302 Found in 126ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-02 15:16:24 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered articles/_login.html.erb (3.7ms)
+Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2011-02-02 15:16:24 -0430
+  Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered articles/_form.html.erb (3.7ms)
+Rendered articles/_login.html.erb (0.3ms)
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2011-02-02 15:16:24 -0430
+  Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "article"=>{"title"=>"", "content"=>""}, "commit"=>"Guardar"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles"."id" FROM "articles" WHERE ("articles"."title" = '') LIMIT 1[0m
+Rendered articles/_form.html.erb (7.9ms)
+Rendered articles/_login.html.erb (0.5ms)
+Completed 200 OK in 20ms (Views: 12.7ms | ActiveRecord: 1.1ms)
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles"."id" FROM "articles" WHERE ("articles"."title" = 'Hello world!') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "articles" ("content", "created_at", "title", "updated_at") VALUES (NULL, '2011-02-02 19:46:24.076730', 'Hello world!', '2011-02-02 19:46:24.076730')[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('testing@man.net')) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "password_salt", "remember_created_at", "remember_token", "reset_password_token", "sign_in_count", "updated_at") VALUES ('2011-02-02 19:46:24.203095', NULL, NULL, 'testing@man.net', '$2a$10$0n7PeImA7pChR4xLIQFcGeCycpLeFbg9ZqEZeoItD2D74A6Udks4W', NULL, NULL, '$2a$10$0n7PeImA7pChR4xLIQFcGe', NULL, NULL, NULL, 0, '2011-02-02 19:46:24.203095')[0m
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-02-02 15:16:24 -0430
+  Processing by Devise::SessionsController#new as HTML
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/devise-1.1.5/app/views/devise/shared/_links.erb (0.9ms)
+Rendered articles/_login.html.erb (1.0ms)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-02-02 15:16:24 -0430
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"testing@man.net", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (2.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'testing@man.net') LIMIT 1
+  [1m[36mSQL (1.5ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = '2011-02-02 19:46:24.422703', "current_sign_in_ip" = '127.0.0.1', "last_sign_in_at" = '2011-02-02 19:46:24.422703', "last_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2011-02-02 19:46:24.422708' WHERE ("users"."id" = 1)[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 137ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-02 15:16:24 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles"
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered articles/_login.html.erb (2.1ms)
+Completed 200 OK in 11ms (Views: 7.5ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-02-02 15:16:24 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.5ms)[0m  SELECT "articles".* FROM "articles"
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered articles/_login.html.erb (2.8ms)
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-02-02 15:16:24 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.5ms)[0m  SELECT "articles".* FROM "articles"
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered articles/_login.html.erb (4.4ms)
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 2.1ms)
+
+
+Started DELETE "/articles/1" for 127.0.0.1 at 2011-02-02 15:16:24 -0430
+  Processing by ArticlesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE ("articles"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "articles" WHERE ("articles"."id" = 1)
+Redirected to http://www.example.com/articles
+Completed 302 Found in 5ms
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-02-02 15:16:24 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered articles/_login.html.erb (2.9ms)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 3.6ms)
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles"."id" FROM "articles" WHERE ("articles"."title" = 'Hello world!') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "articles" ("content", "created_at", "title", "updated_at") VALUES (NULL, '2011-02-02 19:46:24.521103', 'Hello world!', '2011-02-02 19:46:24.521103')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('testing@man.net')) LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "password_salt", "remember_created_at", "remember_token", "reset_password_token", "sign_in_count", "updated_at") VALUES ('2011-02-02 19:46:24.651891', NULL, NULL, 'testing@man.net', '$2a$10$CbJFuDZBE5f3qJCatP7wzOQrKKPkoZy3nxHTcFvr.bjHC66qD/SKK', NULL, NULL, '$2a$10$CbJFuDZBE5f3qJCatP7wzO', NULL, NULL, NULL, 0, '2011-02-02 19:46:24.651891')
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-02-02 15:16:24 -0430
+  Processing by Devise::SessionsController#new as HTML
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/devise-1.1.5/app/views/devise/shared/_links.erb (0.6ms)
+Rendered articles/_login.html.erb (0.8ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-02-02 15:16:24 -0430
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"testing@man.net", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (3.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'testing@man.net') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "current_sign_in_at" = '2011-02-02 19:46:24.802405', "current_sign_in_ip" = '127.0.0.1', "last_sign_in_at" = '2011-02-02 19:46:24.802405', "last_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2011-02-02 19:46:24.802869' WHERE ("users"."id" = 1)
+Redirected to http://www.example.com/
+Completed 302 Found in 129ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-02 15:16:24 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered articles/_login.html.erb (2.7ms)
+Completed 200 OK in 9ms (Views: 6.4ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-02-02 15:16:24 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  [1m[35mUser Load (2.7ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered articles/_login.html.erb (3.9ms)
+Completed 200 OK in 12ms (Views: 8.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-02-02 15:16:24 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  [1m[35mUser Load (1.8ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered articles/_login.html.erb (3.2ms)
+Completed 200 OK in 19ms (Views: 15.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/articles/1/edit" for 127.0.0.1 at 2011-02-02 15:16:24 -0430
+  Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles" WHERE ("articles"."id" = 1) LIMIT 1
+Rendered articles/_form.html.erb (6.1ms)
+Rendered articles/_login.html.erb (0.5ms)
+Completed 200 OK in 77ms (Views: 73.1ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/articles/1" for 127.0.0.1 at 2011-02-02 15:16:24 -0430
+  Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "article"=>{"title"=>"No more hello world!", "content"=>""}, "commit"=>"Guardar", "id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mArticle Load (0.5ms)[0m  SELECT "articles".* FROM "articles" WHERE ("articles"."id" = 1) LIMIT 1
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles"."id" FROM "articles" WHERE ("articles"."title" = 'No more hello world!') AND ("articles".id <> 1) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "articles" SET "content" = '', "title" = 'No more hello world!', "updated_at" = '2011-02-02 19:46:24.973474' WHERE ("articles"."id" = 1)
+Redirected to http://www.example.com/articles/1
+Completed 302 Found in 10ms
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2011-02-02 15:16:24 -0430
+  Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE ("articles"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered articles/_login.html.erb (2.4ms)
+Completed 200 OK in 8ms (Views: 4.7ms | ActiveRecord: 3.7ms)
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE ("articles"."title" = 'No more hello world!') LIMIT 1[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles"."id" FROM "articles" WHERE ("articles"."title" = 'Hello world!') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "articles" ("content", "created_at", "title", "updated_at") VALUES (NULL, '2011-02-02 19:46:25.016455', 'Hello world!', '2011-02-02 19:46:25.016455')[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('testing@man.net')) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "password_salt", "remember_created_at", "remember_token", "reset_password_token", "sign_in_count", "updated_at") VALUES ('2011-02-02 19:46:25.144902', NULL, NULL, 'testing@man.net', '$2a$10$C2dQouDErZxg3mEDcF1SMeKst6ahzjFcc93Kj8MYqLt5JJxYigU5K', NULL, NULL, '$2a$10$C2dQouDErZxg3mEDcF1SMe', NULL, NULL, NULL, 0, '2011-02-02 19:46:25.144902')[0m
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-02-02 15:16:25 -0430
+  Processing by Devise::SessionsController#new as HTML
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/devise-1.1.5/app/views/devise/shared/_links.erb (1.7ms)
+Rendered articles/_login.html.erb (0.7ms)
+Completed 200 OK in 9ms (Views: 9.2ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-02-02 15:16:25 -0430
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"testing@man.net", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'testing@man.net') LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = '2011-02-02 19:46:25.288683', "current_sign_in_ip" = '127.0.0.1', "last_sign_in_at" = '2011-02-02 19:46:25.288683', "last_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2011-02-02 19:46:25.289077' WHERE ("users"."id" = 1)[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 122ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-02 15:16:25 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles"
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered articles/_login.html.erb (4.7ms)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-02-02 15:16:25 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles"
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered articles/_login.html.erb (4.5ms)
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-02-02 15:16:25 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles"
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered articles/_login.html.erb (2.1ms)
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/articles/1/edit" for 127.0.0.1 at 2011-02-02 15:16:25 -0430
+  Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE ("articles"."id" = 1) LIMIT 1[0m
+Rendered articles/_form.html.erb (3.0ms)
+Rendered articles/_login.html.erb (0.5ms)
+Completed 200 OK in 11ms (Views: 8.1ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/articles/1" for 127.0.0.1 at 2011-02-02 15:16:25 -0430
+  Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "article"=>{"title"=>"Hello world!", "content"=>"este no es el contenido original"}, "commit"=>"Guardar", "id"=>"1"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE ("articles"."id" = 1) LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles"."id" FROM "articles" WHERE ("articles"."title" = 'Hello world!') AND ("articles".id <> 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "articles" SET "content" = 'este no es el contenido original', "updated_at" = '2011-02-02 19:46:25.375735' WHERE ("articles"."id" = 1)[0m
+Redirected to http://www.example.com/articles/1
+Completed 302 Found in 8ms
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2011-02-02 15:16:25 -0430
+  Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE ("articles"."id" = 1) LIMIT 1
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered articles/_login.html.erb (2.6ms)
+Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 3.4ms)
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles" WHERE ("articles"."title" = 'Hello world!') LIMIT 1
+  [1m[36mArticle Load (2.6ms)[0m  [1mSELECT "articles"."id" FROM "articles" WHERE ("articles"."title" = 'La respuesta a todas las preguntas') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "articles" ("content", "created_at", "title", "updated_at") VALUES (NULL, '2011-02-02 19:46:25.414236', 'La respuesta a todas las preguntas', '2011-02-02 19:46:25.414236')
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2011-02-02 15:16:25 -0430
+  Processing by Devise::SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 7ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-02 15:16:25 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (1.5ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+Rendered articles/_login.html.erb (0.8ms)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-02-02 15:16:25 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.5ms)[0m  SELECT "articles".* FROM "articles"
+Rendered articles/_login.html.erb (1.4ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('testing@man.net')) LIMIT 1[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "password_salt", "remember_created_at", "remember_token", "reset_password_token", "sign_in_count", "updated_at") VALUES ('2011-02-02 19:46:25.655081', NULL, NULL, 'testing@man.net', '$2a$10$/9ooE5o1iQ35ZQp4hi/0x.qcu6ch8jHywjcf6YVHAWwNQPCjRWatq', NULL, NULL, '$2a$10$/9ooE5o1iQ35ZQp4hi/0x.', NULL, NULL, NULL, 0, '2011-02-02 19:46:25.655081')
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-02-02 15:16:25 -0430
+  Processing by Devise::SessionsController#new as HTML
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/devise-1.1.5/app/views/devise/shared/_links.erb (0.8ms)
+Rendered articles/_login.html.erb (0.8ms)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-02-02 15:16:25 -0430
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"testing@man.net", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'testing@man.net') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "current_sign_in_at" = '2011-02-02 19:46:25.808747', "current_sign_in_ip" = '127.0.0.1', "last_sign_in_at" = '2011-02-02 19:46:25.808747', "last_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2011-02-02 19:46:25.809141' WHERE ("users"."id" = 1)
+Redirected to http://www.example.com/
+Completed 302 Found in 127ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-02 15:16:25 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered articles/_login.html.erb (3.9ms)
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-02-02 15:16:25 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered articles/_login.html.erb (5.0ms)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2011-02-02 15:16:25 -0430
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 5ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-02 15:16:25 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles"
+Rendered articles/_login.html.erb (0.7ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2011-02-02 15:16:25 -0430
+  Processing by Devise::SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-02 15:16:25 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+Rendered articles/_login.html.erb (0.7ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-02-02 15:16:25 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+Rendered articles/_login.html.erb (0.6ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2011-02-02 15:16:25 -0430
+  Processing by ArticlesController#new as HTML
+Completed   in 0ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-02-02 15:16:25 -0430
+  Processing by Devise::SessionsController#new as HTML
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/devise-1.1.5/app/views/devise/shared/_links.erb (0.7ms)
+Rendered articles/_login.html.erb (0.8ms)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles"."id" FROM "articles" WHERE ("articles"."title" = 'La respuesta a todas las preguntas') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "articles" ("content", "created_at", "title", "updated_at") VALUES ('no hay tal cosa', '2011-02-02 19:46:25.928989', 'La respuesta a todas las preguntas', '2011-02-02 19:46:25.928989')
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2011-02-02 15:16:25 -0430
+  Processing by Devise::SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-02 15:16:25 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+Rendered articles/_login.html.erb (0.8ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-02-02 15:16:25 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+Rendered articles/_login.html.erb (3.9ms)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-02-02 15:16:25 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+Rendered articles/_login.html.erb (0.6ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/1/edit" for 127.0.0.1 at 2011-02-02 15:16:26 -0430
+  Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+Completed   in 0ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-02-02 15:16:26 -0430
+  Processing by Devise::SessionsController#new as HTML
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/devise-1.1.5/app/views/devise/shared/_links.erb (4.8ms)
+Rendered articles/_login.html.erb (0.7ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles"."id" FROM "articles" WHERE ("articles"."title" = 'La respuesta a todas las preguntas') LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "articles" ("content", "created_at", "title", "updated_at") VALUES ('no hay tal cosa', '2011-02-02 19:46:26.047903', 'La respuesta a todas las preguntas', '2011-02-02 19:46:26.047903')[0m
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2011-02-02 15:16:26 -0430
+  Processing by Devise::SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-02 15:16:26 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+Rendered articles/_login.html.erb (2.3ms)
+Completed 200 OK in 71ms (Views: 70.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-02-02 15:16:26 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+Rendered articles/_login.html.erb (0.7ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-02-02 15:16:26 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+Rendered articles/_login.html.erb (0.6ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/articles/1" for 127.0.0.1 at 2011-02-02 15:16:26 -0430
+  Processing by ArticlesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Completed   in 0ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-02-02 15:16:26 -0430
+  Processing by Devise::SessionsController#new as HTML
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/devise-1.1.5/app/views/devise/shared/_links.erb (0.7ms)
+Rendered articles/_login.html.erb (1.9ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mArticle Load (0.0ms)[0m  SELECT "articles"."id" FROM "articles" WHERE ("articles"."title" = 'La respuesta a todas las preguntas') LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "articles" ("content", "created_at", "title", "updated_at") VALUES (NULL, '2011-02-02 19:47:16.318067', 'La respuesta a todas las preguntas', '2011-02-02 19:47:16.318067')[0m
+  [1m[35mArticle Load (0.0ms)[0m  SELECT "articles"."id" FROM "articles" WHERE ("articles"."title" = 'Nuevo lorem ipsum') LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "articles" ("content", "created_at", "title", "updated_at") VALUES (NULL, '2011-02-02 19:47:16.347853', 'Nuevo lorem ipsum', '2011-02-02 19:47:16.347853')[0m
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-02-02 15:17:16 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.7ms)[0m  SELECT "articles".* FROM "articles"
+Rendered articles/_login.html.erb (5.3ms)
+Rendered articles/index.html.erb within layouts/application (74.7ms)
+Completed 200 OK in 88ms (Views: 86.1ms | ActiveRecord: 1.7ms)
+  [1m[36mArticle Load (1.7ms)[0m  [1mSELECT "articles"."id" FROM "articles" WHERE ("articles"."title" = 'La respuesta a todas las preguntas') LIMIT 1[0m
+  [1m[35mSQL (2.8ms)[0m  INSERT INTO "articles" ("content", "created_at", "title", "updated_at") VALUES ('no hay tal cosa', '2011-02-02 19:47:16.732746', 'La respuesta a todas las preguntas', '2011-02-02 19:47:16.732746')
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-02-02 15:17:16 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.0ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+Rendered articles/_login.html.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-02-02 15:17:16 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.0ms)[0m  SELECT "articles".* FROM "articles"
+Rendered articles/_login.html.erb (0.4ms)
+Completed 200 OK in 10ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE ("articles"."title" = 'Hello world!') LIMIT 1[0m
+  [1m[35mUser Load (3.8ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('testing@man.net')) LIMIT 1
+  [1m[36mSQL (4.4ms)[0m  [1mINSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "password_salt", "remember_created_at", "remember_token", "reset_password_token", "sign_in_count", "updated_at") VALUES ('2011-02-02 19:47:17.070584', NULL, NULL, 'testing@man.net', '$2a$10$CpkMpjr2fMiVPO14uK.BX.Yd93svakrlcGusnRpQGyvGT4j.3qP9S', NULL, NULL, '$2a$10$CpkMpjr2fMiVPO14uK.BX.', NULL, NULL, NULL, 0, '2011-02-02 19:47:17.070584')[0m
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-02-02 15:17:17 -0430
+  Processing by Devise::SessionsController#new as HTML
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/devise-1.1.5/app/views/devise/shared/_links.erb (3.6ms)
+Rendered articles/_login.html.erb (0.7ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 8.4ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-02-02 15:17:17 -0430
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"testing@man.net", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'testing@man.net') LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = '2011-02-02 19:47:17.308256', "current_sign_in_ip" = '127.0.0.1', "last_sign_in_at" = '2011-02-02 19:47:17.308256', "last_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2011-02-02 19:47:17.308885' WHERE ("users"."id" = 1)[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 120ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-02 15:17:17 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles"
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered articles/_login.html.erb (2.8ms)
+Completed 200 OK in 11ms (Views: 3.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-02-02 15:17:17 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered articles/_login.html.erb (2.1ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2011-02-02 15:17:17 -0430
+  Processing by ArticlesController#new as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered articles/_form.html.erb (8.8ms)
+Rendered articles/_login.html.erb (0.5ms)
+Completed 200 OK in 25ms (Views: 17.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2011-02-02 15:17:17 -0430
+  Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "article"=>{"title"=>"Hello world!", "content"=>"spam spam spam"}, "commit"=>"Guardar"}
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles"."id" FROM "articles" WHERE ("articles"."title" = 'Hello world!') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "articles" ("content", "created_at", "title", "updated_at") VALUES ('spam spam spam', '2011-02-02 19:47:17.381236', 'Hello world!', '2011-02-02 19:47:17.381236')[0m
+Redirected to http://www.example.com/articles/1
+Completed 302 Found in 11ms
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2011-02-02 15:17:17 -0430
+  Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mArticle Load (0.0ms)[0m  SELECT "articles".* FROM "articles" WHERE ("articles"."id" = 1) LIMIT 1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered articles/_login.html.erb (0.0ms)
+Completed 200 OK in 1ms (Views: -0.0ms | ActiveRecord: 2.2ms)
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE ("articles"."title" = 'Hello world!') LIMIT 1
+  [1m[36mArticle Load (1.1ms)[0m  [1mSELECT "articles"."id" FROM "articles" WHERE ("articles"."title" = 'Hello world!') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "articles" ("content", "created_at", "title", "updated_at") VALUES (NULL, '2011-02-02 19:47:17.426967', 'Hello world!', '2011-02-02 19:47:17.426967')
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('testing@man.net')) LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "password_salt", "remember_created_at", "remember_token", "reset_password_token", "sign_in_count", "updated_at") VALUES ('2011-02-02 19:47:17.548290', NULL, NULL, 'testing@man.net', '$2a$10$8fLCfJqtoGE9InPSwzaYU.uPxbHmAPceywReuALYeIalYTQW5Wp6O', NULL, NULL, '$2a$10$8fLCfJqtoGE9InPSwzaYU.', NULL, NULL, NULL, 0, '2011-02-02 19:47:17.548290')
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-02-02 15:17:17 -0430
+  Processing by Devise::SessionsController#new as HTML
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/devise-1.1.5/app/views/devise/shared/_links.erb (1.9ms)
+Rendered articles/_login.html.erb (0.5ms)
+Completed 200 OK in 11ms (Views: 11.0ms | ActiveRecord: 4.8ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-02-02 15:17:17 -0430
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"testing@man.net", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'testing@man.net') LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "users" SET "current_sign_in_at" = '2011-02-02 19:47:17.705085', "current_sign_in_ip" = '127.0.0.1', "last_sign_in_at" = '2011-02-02 19:47:17.705085', "last_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2011-02-02 19:47:17.705368' WHERE ("users"."id" = 1)
+Redirected to http://www.example.com/
+Completed 302 Found in 131ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-02 15:17:17 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.0ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered articles/_login.html.erb (2.9ms)
+Completed 200 OK in 100ms (Views: 98.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-02-02 15:17:17 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.7ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered articles/_login.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 2.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2011-02-02 15:17:17 -0430
+  Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered articles/_form.html.erb (5.9ms)
+Rendered articles/_login.html.erb (0.0ms)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2011-02-02 15:17:17 -0430
+  Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "article"=>{"title"=>"Hello world!", "content"=>""}, "commit"=>"Guardar"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mArticle Load (8.5ms)[0m  [1mSELECT "articles"."id" FROM "articles" WHERE ("articles"."title" = 'Hello world!') LIMIT 1[0m
+Rendered articles/_form.html.erb (6.9ms)
+Rendered articles/_login.html.erb (2.9ms)
+Completed 200 OK in 25ms (Views: 16.6ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-02-02 15:17:17 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.0ms)[0m  SELECT "articles".* FROM "articles"
+Rendered articles/_login.html.erb (0.0ms)
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('testing@man.net')) LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "password_salt", "remember_created_at", "remember_token", "reset_password_token", "sign_in_count", "updated_at") VALUES ('2011-02-02 19:47:18.017097', NULL, NULL, 'testing@man.net', '$2a$10$K3sBuPKECfuQgonyAsLfbOsjWq8.CljKGkYDxROKzEnN9NYv3VI0W', NULL, NULL, '$2a$10$K3sBuPKECfuQgonyAsLfbO', NULL, NULL, NULL, 0, '2011-02-02 19:47:18.017097')
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-02-02 15:17:18 -0430
+  Processing by Devise::SessionsController#new as HTML
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/devise-1.1.5/app/views/devise/shared/_links.erb (0.6ms)
+Rendered articles/_login.html.erb (0.5ms)
+Completed 200 OK in 10ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-02-02 15:17:18 -0430
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"testing@man.net", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (65.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'testing@man.net') LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  UPDATE "users" SET "current_sign_in_at" = '2011-02-02 19:47:18.371285', "current_sign_in_ip" = '127.0.0.1', "last_sign_in_at" = '2011-02-02 19:47:18.371285', "last_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2011-02-02 19:47:18.371640' WHERE ("users"."id" = 1)
+Redirected to http://www.example.com/
+Completed 302 Found in 261ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-02 15:17:18 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  [1m[35mUser Load (1.5ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered articles/_login.html.erb (2.8ms)
+Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 66.7ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2011-02-02 15:17:18 -0430
+  Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered articles/_form.html.erb (3.1ms)
+Rendered articles/_login.html.erb (0.4ms)
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2011-02-02 15:17:18 -0430
+  Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "article"=>{"title"=>"", "content"=>""}, "commit"=>"Guardar"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles"."id" FROM "articles" WHERE ("articles"."title" = '') LIMIT 1[0m
+Rendered articles/_form.html.erb (4.3ms)
+Rendered articles/_login.html.erb (0.4ms)
+Completed 200 OK in 16ms (Views: 7.9ms | ActiveRecord: 0.7ms)
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles"."id" FROM "articles" WHERE ("articles"."title" = 'Hello world!') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "articles" ("content", "created_at", "title", "updated_at") VALUES (NULL, '2011-02-02 19:47:18.436739', 'Hello world!', '2011-02-02 19:47:18.436739')[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('testing@man.net')) LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "password_salt", "remember_created_at", "remember_token", "reset_password_token", "sign_in_count", "updated_at") VALUES ('2011-02-02 19:47:18.561426', NULL, NULL, 'testing@man.net', '$2a$10$GkO.cuHgOzq7PUaviXB2.ObEK3AYWZ4gWDSXO9bvo4Jc0RH4X6xQ2', NULL, NULL, '$2a$10$GkO.cuHgOzq7PUaviXB2.O', NULL, NULL, NULL, 0, '2011-02-02 19:47:18.561426')[0m
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-02-02 15:17:18 -0430
+  Processing by Devise::SessionsController#new as HTML
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/devise-1.1.5/app/views/devise/shared/_links.erb (0.9ms)
+Rendered articles/_login.html.erb (0.7ms)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-02-02 15:17:18 -0430
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"testing@man.net", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (57.9ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'testing@man.net') LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = '2011-02-02 19:47:18.780472', "current_sign_in_ip" = '127.0.0.1', "last_sign_in_at" = '2011-02-02 19:47:18.780472', "last_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2011-02-02 19:47:18.781140' WHERE ("users"."id" = 1)[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 200ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-02 15:17:18 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.8ms)[0m  SELECT "articles".* FROM "articles"
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered articles/_login.html.erb (3.0ms)
+Completed 200 OK in 11ms (Views: 7.7ms | ActiveRecord: 61.6ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-02-02 15:17:18 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles"
+  [1m[36mUser Load (2.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered articles/_login.html.erb (4.9ms)
+Completed 200 OK in 17ms (Views: 11.6ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-02-02 15:17:18 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.5ms)[0m  SELECT "articles".* FROM "articles"
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered articles/_login.html.erb (3.4ms)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/articles/1" for 127.0.0.1 at 2011-02-02 15:17:18 -0430
+  Processing by ArticlesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE ("articles"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "articles" WHERE ("articles"."id" = 1)
+Redirected to http://www.example.com/articles
+Completed 302 Found in 7ms
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-02-02 15:17:18 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered articles/_login.html.erb (2.7ms)
+Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 2.0ms)
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles"."id" FROM "articles" WHERE ("articles"."title" = 'Hello world!') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "articles" ("content", "created_at", "title", "updated_at") VALUES (NULL, '2011-02-02 19:47:18.895557', 'Hello world!', '2011-02-02 19:47:18.895557')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('testing@man.net')) LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "password_salt", "remember_created_at", "remember_token", "reset_password_token", "sign_in_count", "updated_at") VALUES ('2011-02-02 19:47:19.023287', NULL, NULL, 'testing@man.net', '$2a$10$knUfPf4xhjd4x1.8ZShW8.WRBabY73F4JtpP3umszwGfvnUDA0g9O', NULL, NULL, '$2a$10$knUfPf4xhjd4x1.8ZShW8.', NULL, NULL, NULL, 0, '2011-02-02 19:47:19.023287')
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-02-02 15:17:19 -0430
+  Processing by Devise::SessionsController#new as HTML
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/devise-1.1.5/app/views/devise/shared/_links.erb (0.7ms)
+Rendered articles/_login.html.erb (0.8ms)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-02-02 15:17:19 -0430
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"testing@man.net", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (1.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'testing@man.net') LIMIT 1[0m
+  [1m[35mSQL (2.5ms)[0m  UPDATE "users" SET "current_sign_in_at" = '2011-02-02 19:47:19.172143', "current_sign_in_ip" = '127.0.0.1', "last_sign_in_at" = '2011-02-02 19:47:19.172143', "last_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2011-02-02 19:47:19.172514' WHERE ("users"."id" = 1)
+Redirected to http://www.example.com/
+Completed 302 Found in 125ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-02 15:17:19 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  [1m[35mUser Load (3.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered articles/_login.html.erb (4.3ms)
+Completed 200 OK in 10ms (Views: 5.5ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-02-02 15:17:19 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered articles/_login.html.erb (2.5ms)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-02-02 15:17:19 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered articles/_login.html.erb (2.3ms)
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/articles/1/edit" for 127.0.0.1 at 2011-02-02 15:17:19 -0430
+  Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles" WHERE ("articles"."id" = 1) LIMIT 1
+Rendered articles/_form.html.erb (3.1ms)
+Rendered articles/_login.html.erb (1.2ms)
+Completed 200 OK in 16ms (Views: 13.0ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/articles/1" for 127.0.0.1 at 2011-02-02 15:17:19 -0430
+  Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "article"=>{"title"=>"No more hello world!", "content"=>""}, "commit"=>"Guardar", "id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles" WHERE ("articles"."id" = 1) LIMIT 1
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles"."id" FROM "articles" WHERE ("articles"."title" = 'No more hello world!') AND ("articles".id <> 1) LIMIT 1[0m
+  [1m[35mSQL (1.3ms)[0m  UPDATE "articles" SET "content" = '', "title" = 'No more hello world!', "updated_at" = '2011-02-02 19:47:19.272701' WHERE ("articles"."id" = 1)
+Redirected to http://www.example.com/articles/1
+Completed 302 Found in 10ms
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2011-02-02 15:17:19 -0430
+  Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE ("articles"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered articles/_login.html.erb (6.2ms)
+Completed 200 OK in 17ms (Views: 13.9ms | ActiveRecord: 4.7ms)
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE ("articles"."title" = 'No more hello world!') LIMIT 1[0m
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles"."id" FROM "articles" WHERE ("articles"."title" = 'Hello world!') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "articles" ("content", "created_at", "title", "updated_at") VALUES (NULL, '2011-02-02 19:47:19.393942', 'Hello world!', '2011-02-02 19:47:19.393942')[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('testing@man.net')) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "password_salt", "remember_created_at", "remember_token", "reset_password_token", "sign_in_count", "updated_at") VALUES ('2011-02-02 19:47:19.520679', NULL, NULL, 'testing@man.net', '$2a$10$iewyDH/LRq3ahWYtAuwOQur4tgR5eClWGk2qOSfUszGrnD2QnzQli', NULL, NULL, '$2a$10$iewyDH/LRq3ahWYtAuwOQu', NULL, NULL, NULL, 0, '2011-02-02 19:47:19.520679')[0m
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-02-02 15:17:19 -0430
+  Processing by Devise::SessionsController#new as HTML
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/devise-1.1.5/app/views/devise/shared/_links.erb (0.7ms)
+Rendered articles/_login.html.erb (0.7ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-02-02 15:17:19 -0430
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"testing@man.net", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (2.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'testing@man.net') LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = '2011-02-02 19:47:19.670775', "current_sign_in_ip" = '127.0.0.1', "last_sign_in_at" = '2011-02-02 19:47:19.670775', "last_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2011-02-02 19:47:19.671570' WHERE ("users"."id" = 1)[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 124ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-02 15:17:19 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.5ms)[0m  SELECT "articles".* FROM "articles"
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered articles/_login.html.erb (2.6ms)
+Completed 200 OK in 12ms (Views: 8.4ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-02-02 15:17:19 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.7ms)[0m  SELECT "articles".* FROM "articles"
+  [1m[36mUser Load (2.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered articles/_login.html.erb (3.9ms)
+Completed 200 OK in 11ms (Views: 7.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-02-02 15:17:19 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles"
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered articles/_login.html.erb (2.1ms)
+Completed 200 OK in 10ms (Views: 5.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/articles/1/edit" for 127.0.0.1 at 2011-02-02 15:17:19 -0430
+  Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mArticle Load (0.0ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE ("articles"."id" = 1) LIMIT 1[0m
+Rendered articles/_form.html.erb (3.4ms)
+Rendered articles/_login.html.erb (0.4ms)
+Completed 200 OK in 12ms (Views: 7.6ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/articles/1" for 127.0.0.1 at 2011-02-02 15:17:19 -0430
+  Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "article"=>{"title"=>"Hello world!", "content"=>"este no es el contenido original"}, "commit"=>"Guardar", "id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mArticle Load (1.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE ("articles"."id" = 1) LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles"."id" FROM "articles" WHERE ("articles"."title" = 'Hello world!') AND ("articles".id <> 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "articles" SET "content" = 'este no es el contenido original', "updated_at" = '2011-02-02 19:47:19.763827' WHERE ("articles"."id" = 1)[0m
+Redirected to http://www.example.com/articles/1
+Completed 302 Found in 10ms
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2011-02-02 15:17:19 -0430
+  Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE ("articles"."id" = 1) LIMIT 1
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered articles/_login.html.erb (7.1ms)
+Completed 200 OK in 13ms (Views: 9.5ms | ActiveRecord: 3.3ms)
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE ("articles"."title" = 'Hello world!') LIMIT 1
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles"."id" FROM "articles" WHERE ("articles"."title" = 'La respuesta a todas las preguntas') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "articles" ("content", "created_at", "title", "updated_at") VALUES (NULL, '2011-02-02 19:47:19.796767', 'La respuesta a todas las preguntas', '2011-02-02 19:47:19.796767')
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2011-02-02 15:17:19 -0430
+  Processing by Devise::SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-02 15:17:19 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+Rendered articles/_login.html.erb (0.8ms)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-02-02 15:17:19 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles"
+Rendered articles/_login.html.erb (2.5ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('testing@man.net')) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "password_salt", "remember_created_at", "remember_token", "reset_password_token", "sign_in_count", "updated_at") VALUES ('2011-02-02 19:47:19.976512', NULL, NULL, 'testing@man.net', '$2a$10$kRfJ9m05t9pEkbGtdh35kuuNoWw91XcHrPIjAaYr9Wl6CMx38pbJy', NULL, NULL, '$2a$10$kRfJ9m05t9pEkbGtdh35ku', NULL, NULL, NULL, 0, '2011-02-02 19:47:19.976512')
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-02-02 15:17:19 -0430
+  Processing by Devise::SessionsController#new as HTML
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/devise-1.1.5/app/views/devise/shared/_links.erb (4.3ms)
+Rendered articles/_login.html.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-02-02 15:17:20 -0430
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"testing@man.net", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'testing@man.net') LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "users" SET "current_sign_in_at" = '2011-02-02 19:47:20.178859', "current_sign_in_ip" = '127.0.0.1', "last_sign_in_at" = '2011-02-02 19:47:20.178859', "last_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2011-02-02 19:47:20.179341' WHERE ("users"."id" = 1)
+Redirected to http://www.example.com/
+Completed 302 Found in 124ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-02 15:17:20 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered articles/_login.html.erb (2.4ms)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-02-02 15:17:20 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  [1m[35mUser Load (4.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered articles/_login.html.erb (6.1ms)
+Completed 200 OK in 10ms (Views: 4.8ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2011-02-02 15:17:20 -0430
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-02 15:17:20 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles"
+Rendered articles/_login.html.erb (2.9ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2011-02-02 15:17:20 -0430
+  Processing by Devise::SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-02 15:17:20 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+Rendered articles/_login.html.erb (1.3ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-02-02 15:17:20 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles"
+Rendered articles/_login.html.erb (0.7ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2011-02-02 15:17:20 -0430
+  Processing by ArticlesController#new as HTML
+Completed   in 0ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-02-02 15:17:20 -0430
+  Processing by Devise::SessionsController#new as HTML
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/devise-1.1.5/app/views/devise/shared/_links.erb (0.6ms)
+Rendered articles/_login.html.erb (0.6ms)
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles"."id" FROM "articles" WHERE ("articles"."title" = 'La respuesta a todas las preguntas') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "articles" ("content", "created_at", "title", "updated_at") VALUES ('no hay tal cosa', '2011-02-02 19:47:20.304550', 'La respuesta a todas las preguntas', '2011-02-02 19:47:20.304550')
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2011-02-02 15:17:20 -0430
+  Processing by Devise::SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-02 15:17:20 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (1.5ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+Rendered articles/_login.html.erb (0.6ms)
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-02-02 15:17:20 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+Rendered articles/_login.html.erb (0.7ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-02-02 15:17:20 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (3.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+Rendered articles/_login.html.erb (0.8ms)
+Completed 200 OK in 13ms (Views: 9.3ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/articles/1/edit" for 127.0.0.1 at 2011-02-02 15:17:20 -0430
+  Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+Completed   in 2ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-02-02 15:17:20 -0430
+  Processing by Devise::SessionsController#new as HTML
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/devise-1.1.5/app/views/devise/shared/_links.erb (0.6ms)
+Rendered articles/_login.html.erb (0.9ms)
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles"."id" FROM "articles" WHERE ("articles"."title" = 'La respuesta a todas las preguntas') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "articles" ("content", "created_at", "title", "updated_at") VALUES ('no hay tal cosa', '2011-02-02 19:47:20.403108', 'La respuesta a todas las preguntas', '2011-02-02 19:47:20.403108')[0m
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2011-02-02 15:17:20 -0430
+  Processing by Devise::SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-02 15:17:20 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+Rendered articles/_login.html.erb (1.3ms)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-02-02 15:17:20 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+Rendered articles/_login.html.erb (0.9ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-02-02 15:17:20 -0430
+  Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+Rendered articles/_login.html.erb (0.5ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/articles/1" for 127.0.0.1 at 2011-02-02 15:17:20 -0430
+  Processing by ArticlesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Completed   in 0ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-02-02 15:17:20 -0430
+  Processing by Devise::SessionsController#new as HTML
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/devise-1.1.5/app/views/devise/shared/_links.erb (0.8ms)
+Rendered articles/_login.html.erb (0.6ms)
+Completed 200 OK in 77ms (Views: 76.5ms | ActiveRecord: 0.0ms)
