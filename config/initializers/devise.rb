@@ -35,18 +35,6 @@ Devise.setup do |config|
   # config.http_authentication_realm = "Application"
 
   # ==> Configuration for :database_authenticatable
-  # For bcrypt, this is the cost for hashing the password and defaults to 10. If
-  # using other encryptors, it sets how many times you want the password re-encrypted.
-  config.stretches = 10
-
-  # Define which will be the encryption algorithm. Devise also supports encryptors
-  # from others authentication tools as :clearance_sha1, :authlogic_sha512 (then
-  # you should set stretches above to 20 for default behavior) and :restful_authentication_sha1
-  # (then you should set stretches to 10, and copy REST_AUTH_SITE_KEY to pepper)
-  config.encryptor = :bcrypt
-
-  # Setup a pepper to generate the encrypted password.
-  config.pepper = "413ba8153c0b03a42a93cab5588d5d5d446029118c636a3ec63bc35e5526fab8a71e61534f292d852817e04993887cc080d439ea90910c9b7a3aecfc05facba1"
 
   # ==> Configuration for :confirmable
   # The time you want to give your user to confirm his account. During this time
