@@ -17,9 +17,15 @@ module NavigationHelpers
 
      when /login/
       ('/users/sign_in')
-
-    when /new page/
+    
+     when /new page/
       ('/articles/new')
+    
+     when /edit page/
+      ('/articles/edit')
+    
+     when /delete page/
+      ('/articles/delete')
 
     when /sign in page/
       ('/users/sign_in')
