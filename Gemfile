@@ -31,5 +31,8 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
   #  gem 'webrat'
      gem 'capybara'
     gem 'devise'
+<<<<<<< HEAD
     gem 'simplecov'
+=======
+>>>>>>> a17e7002c4aa188cdb52a3c0a476206b27a85546
   end

@@ -2729,3 +2729,4 @@ Completed 200 OK in 332ms (Views: 61.4ms | ActiveRecord: 1.7ms)
   [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
   [1m[35mSQL (65.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110131195507')
   [1m[36mSQL (41.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110118150340')[0m
+

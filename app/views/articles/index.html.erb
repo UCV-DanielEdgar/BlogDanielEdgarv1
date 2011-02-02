@@ -16,15 +16,15 @@
     <td><%= article.content %></td>
     <td><%= link_to article.title %></td>
     <td><%= link_to article.content %></td>
+
   
     <td><%= link_to 'Editar', edit_article_path(article) %></td>
     <td><%= link_to 'Eliminar', article, :method => :delete %></td>
-   
-        
-    
+
   </tr>
 <% end %>
 <tr>
+
 
 <td><%= link_to 'Volver a artículos', articles_path %></td>
 <td><%= link_to 'Agregar articulo', new_article_path %></td>
