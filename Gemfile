@@ -17,6 +17,7 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 # gem 'ruby-debug'
 
 gem 'simplecov'
+gem 'devise', '1.1.rc0' 
 
 # Bundle the extra gems:
 # gem 'bj'
@@ -32,7 +33,7 @@ gem 'simplecov'
     gem 'cucumber-rails', '>=0.3.2'
   #  gem 'webrat'
      gem 'capybara'
-    gem 'devise'
+    
 
    
 
