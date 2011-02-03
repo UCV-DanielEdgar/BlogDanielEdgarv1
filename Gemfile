@@ -4,7 +4,7 @@ gem 'rails', '3.0.1'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
+gem 'devise' 
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
 # Use unicorn as the web server
@@ -33,7 +33,7 @@ gem 'simplecov'
     gem 'cucumber-rails', '>=0.3.2'
   #  gem 'webrat'
      gem 'capybara'
-    gem 'devise'    
+       
 
    
 
